@@ -3,10 +3,16 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "automotive-cruise-control"
-version = "0.1.0"
-description = "Realistic longitudinal vehicle control evaluation starter"
+name = "energy-aware-cruise-control"
+version = "1.0.0"
+description = "Reproducible energy-aware highway cruise control with grade-preview uncertainty"
 requires-python = ">=3.10"
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7"]
+
+[project.scripts]
+energy-cruise = "energy_cruise.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
